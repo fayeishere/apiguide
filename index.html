@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Social API Guide</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- SOCIAL STUFF -->
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary" />
+<!-- 	<meta name="twitter:site" content="@fayeishere" /> -->
+	<meta name="twitter:title" content="Best Title Ever" />
+	<meta name="twitter:description" content="This is my amazing description." />
+	<meta name="twitter:image" content="https://25ab3e9b.ngrok.com/images/mouse.jpg" />
+	<!-- URL IS NOT WORKING -->
+	<meta name="twitter:url" content="http://www.theworldsworstwebsiteever.com" />
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<!-- JS -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<div class="container">
+		<div class="sixteen columns">
+			<h1 class="remove-bottom" style="margin-top: 40px">Social API Guide</h1>
+			<h5>Updated: 9/19/14</h5>
+			<hr />
+		</div>
+		<div class="sixteen columns box">
+			<h3>Important Changes At A Glance</h3>
+			<h4>Facebook: (<a href="https://developers.facebook.com/docs/apps/upgrading">https://developers.facebook.com/docs/apps/upgrading</a>)</h4>
+			<ul>
+				<li>FB no longer allows FQL</li>
+				<li>New JS SDK location: js.src = "//connect.facebook.com/en_US/sdk.js";</li>
+				<li>All friend_* permissions have been removed</li>
+			</ul>
+			<h4>Twitter: (<a href="https://dev.twitter.com/overview/documentation">https://dev.twitter.com/overview/documentation)</a></h4>
+			<ul>
+				<li>Twitter allows gifs</li>
+			</ul>
+		</div>
+		<div class="sixteen columns box">
+			<h3>Best Practices</h3>
+			<h4>General</h4>
+			<img id="cheat" src="images/image-cheat.jpg">
+			<h4 class="section name">Facebook:</h4>
+			<h4>(<a href="https://developers.facebook.com/docs/sharing/best-practices">https://developers.facebook.com/docs/sharing/best-practices</a>)</h4>
+			<div class="content-box">
+				<ul class="outer-list">
+					<li>OG tags for ANY and ALL sites:
+						<ul class="inner-list">
+							<li>og:title – The title of your article, excluding any branding.</li>
+							<li>og:site_name - The name of your website. Not the URL, but the name. (i.e. "IMDb" not "imdb.com".)</li>
+							<li>og:url – This URL serves as the unique identifier for your post. It should match your canonical URL used for SEO, and it should not include any session variables, user identifying parameters, or counters. If you use this improperly, likes and shares will not be aggregated for this URL and will be spread across all of the variations of the URL.</li>
+							<li>og:description – A detailed description of the piece of content, usually between 2 and 4 sentences. This tag is technically optional, but can improve the rate at which links are read and shared.</li>
+							<li>og:image – This is an image associated with your media. We suggest that you use an image of at least 1200x630 pixels.</li>
+							<li>fb:app_id – The unique ID that lets Facebook know the identity of your site. This is crucial for Facebook Insights to work properly. Please see our Insights documentation to learn more.</li>
+						</ul>
+					</li>
+					<li>For direct "button" sharing, minimum copy requirements are: name of app, link to be shared, an image, and description.</li>
+					<li>Images should be 1200 x 630 pixels for the best display on high resolution devices.</li>
+				</ul>
+			</div>
+			<h4 class="name">Twitter:</h4>
+			<h4>This is for custom twitter button sharing. For direct posting to Twitter refer to http://blog.filemobile.com/twitter-image-preview/ for optimal image sizes in feed.</h4>
+			<h4>Examples below. 1st tweeter is the most basic and simple using https://twitter.com/intent/tweet (https://dev.twitter.com/web/intents). 2nd tweeter using https://twitter.com/share (https://dev.twitter.com/web/tweet-button/parameters) in EXPANDED view with two URLs, one is showing a gif (can be replaced by a Twitpic image), site link can be placed in URL parameter for a longer text tweet.</h4>
+			<div class="icons">
+				<div class="twitter" id="twit-box"><a id="twit" href="https://twitter.com/intent/tweet?text=Testing twitter. Woot. http://www.theworldsworstwebsiteever.com" target="_blank"><img src="images/twitter.png"></a></div>
+				<div class="result" ><img src="images/tweet-basic.png"></div>
+				<div class="twitter" id="twitter-box"><a id="twitter" href="#" target="_blank"><img src="images/twitter.png"></a></div>
+				<div class="result" ><img src="images/tweet-advanced.png"></div>
+			</div>
+			<div class="content-box">
+				<ul class="outer-list">
+					<li>Tweet buttons use the https://twitter.com/share URL (examples - https://dev.twitter.com/web/tweet-button/parameters)
+						<ul class="inner-list">Query String Parameters (Optional, common params bolded)
+							<li class="bolder">url - URL of the page to share</li>
+							<li>via - Screen name of the user to attribute the Tweet to</li>
+							<li class="bolder">text - Default Tweet text</li>
+							<li>related - Related accounts</li>
+							<li>count - Count box position</li>
+							<li>lang - The language for the Tweet Button</li>
+							<li>counturl - URL to which your shared URL resolves</li>
+							<li class="bolder">hashtags - Comma separated hashtags appended to tweet text</li>
+							<li>size - The size of the rendered button</li>
+							<li>dnt - Opt-out of tailoring Twitter</li>
+						</ul>
+					</li>
+					<li>Twitter Cards need validation. Default 'Summary Card' OG tags:</li>
+						<ul><a href="https://dev.twitter.com/cards/markup">Reference</a>
+							<li>twitter:card - Should be set to a value of “summary”</li>
+							<li>twitter:title - Title should be concise and will be truncated at 70 characters.</li>
+							<li>twitter:description - A description that concisely summarizes the content of the page, as appropriate for presentation within a Tweet. Do not re-use the title text as the description, or use this field to describe the general services provided by the website. Description text will be truncated at the word to 200 characters.</li>
+							<li>twitter:image - URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. The image must be a minimum size of 120px by 120px and must be less than 1MB in file size. For an expanded tweet and its detail page, the image will be cropped to a 4:3 aspect ratio and resized to be displayed at 120px by 90px. The image will also be cropped and resized to 120px by 120px for use in embedded tweets.</li>
+						</ul>
+				</ul>
+			</div>
+		</div>
+		<div class="sixteen columns box">
+			<h3>Limitations</h3>
+			<h4 class="name">All: </h4>
+			<ul class="outer-list">
+				<li>Developing within another environment such as youtube makes the OG tags unusable.</li>
+			</ul>
+			<h4 class="name">Facebook: </h4>
+			<div class="content-box">
+				<ul class="outer-list">
+					<li>Optimized images will display large in "feed" (on left) but on a profile page the image will display as thumbnail (on right).</li>
+					<div id="facebook-box">
+						<div id="fb-feed"><img src="images/fb-feed.png"></div><div id="fb-profile"><img src="images/fb-profile.png"></div>
+					</div>
+				</ul>
+			</div>
+			<h4 class="name">Twitter:</h4>
+			<div class="content-box">
+				<ul class="outer-list">
+					<li>140 character limit which includes URL</li>
+					<li>There are quite a few rate limits, check https://dev.twitter.com/rest/public</li>
+					<li>Tweets can be changed by the user before posting.</li>
+					<li>Twitter cards need to be pre-approved by Twitter. Try <a href="https://cards-dev.twitter.com/validator">Preview</a></li>
+					<li>POST statuses / update_with_media requires OAUTH backend solution. Front end solution requires using Twitter Cards</li>
+				</ul>
+			</div>
+		</div>
+
+	</div><!-- container -->
+
+
+	<script src="main.js"></script>
+<!-- End Document
+================================================== -->
+</body>
+</html>
