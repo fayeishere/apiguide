@@ -30,7 +30,7 @@ SAS.main = (function() {
       case "localhost:8080":
         appId = "305834246207937";
         break;
-      case "livesite.com":
+      case "fayeishere.github.io/apiguide/":
         appId = "861782343846424";
         break;
       default:
