@@ -13,7 +13,7 @@
 	<meta name="author" content="">
 
 	<!-- SOCIAL STUFF -->
-  <!-- Facebook -->
+  <!-- Facebook and Google Plus-->
   <meta property="og:title" content="Social API Guide">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://fayeishere.github.io/apiguide/">
@@ -26,7 +26,6 @@
 	<meta name="twitter:title" content="Best Title Ever" />
 	<meta name="twitter:description" content="This is my amazing description." />
 	<meta name="twitter:image" content="http://fayeishere.github.io/apiguide/images/cattoast.jpg" />
-	<!-- URL IS NOT WORKING -->
 	<meta name="twitter:url" content="http://fayeishere.github.io/apiguide/" />
 
 	<!-- Mobile Specific Metas
@@ -89,7 +88,7 @@
 			<h4>(<a href="https://developers.facebook.com/docs/sharing/best-practices">https://developers.facebook.com/docs/sharing/best-practices</a>)</h4>
 			<div class="content-box">
 				<ul class="outer-list">
-					<li>OG tags for ANY and ALL sites:
+					<li>OG tags for ANY and ALL sites (for example simply share this URL):
 						<ul class="inner-list">
 							<li>og:title – The title of your article, excluding any branding.</li>
 							<li>og:site_name - The name of your website. Not the URL, but the name. (i.e. "IMDb" not "imdb.com".)</li>
@@ -135,14 +134,20 @@
 							<li>dnt - Opt-out of tailoring Twitter</li>
 						</ul>
 					</li>
-					<li>Twitter Cards need validation. Default 'Summary Card' OG tags:</li>
+					<li>Twitter Cards need validation. For 'summary_large_image' OG tags (for example simply share this URL):</li>
 						<ul><a href="https://dev.twitter.com/cards/markup">Reference</a>
-							<li>twitter:card - Should be set to a value of “summary”</li>
+							<li>twitter:card - Should be set to a value of “summary_large_image”</li>
 							<li>twitter:title - Title should be concise and will be truncated at 70 characters.</li>
 							<li>twitter:description - A description that concisely summarizes the content of the page, as appropriate for presentation within a Tweet. Do not re-use the title text as the description, or use this field to describe the general services provided by the website. Description text will be truncated at the word to 200 characters.</li>
-							<li>twitter:image - URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. The image must be a minimum size of 120px by 120px and must be less than 1MB in file size. For an expanded tweet and its detail page, the image will be cropped to a 4:3 aspect ratio and resized to be displayed at 120px by 90px. The image will also be cropped and resized to 120px by 120px for use in embedded tweets.</li>
+							<li>twitter:image - URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. Images for this Card should be at least 280px in width, and at least 150px in height. Image must be less than 1MB in size.</li>
 						</ul>
 				</ul>
+			</div>
+			<h4 class="name">Google Plus:</h4>
+			<h4>This is an example for a custom google plus button post with OG tag optimization.</h4>
+			<div class="content-box">
+        <a id="g-plus" href="https://plus.google.com/share?url=https%3A%2F%2Ffayeishere.github.io/apiguide/" target="_blank"><img src="images/g-plus.png"></a>
+        <div class="result" ><img src="images/gplus-result.png"></div>
 			</div>
 		</div>
 		<div class="sixteen columns box">
@@ -166,7 +171,7 @@
 					<li>140 character limit which includes URL</li>
 					<li>There are quite a few rate limits, check https://dev.twitter.com/rest/public</li>
 					<li>Tweets can be changed by the user before posting.</li>
-					<li>Twitter cards need to be pre-approved by Twitter. Try <a href="https://cards-dev.twitter.com/validator">Preview</a></li>
+					<li>Twitter cards need to be pre-approved by Twitter via an accessible URL. Try <a href="https://cards-dev.twitter.com/validator">Preview</a> Cards may also be cached up to a week.</li>
 					<li>POST statuses / update_with_media requires OAUTH backend solution. Front end solution requires using Twitter Cards</li>
 				</ul>
 			</div>
