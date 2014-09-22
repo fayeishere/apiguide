@@ -52,7 +52,7 @@ SAS.main = (function() {
               method: 'feed',
               name: 'Sharing on Facebook and you can too',
               link: 'http://fayeishere.github.io/apiguide/',
-              picture: 'http://'+window.location.host+'/img/coffeecat.jpg',
+              picture: 'http://fayeishere.github.io/apiguide/images/coffeecat.jpg',
               caption: 'Caption is optional',
               description: 'This is a fantastic description.'
             },
