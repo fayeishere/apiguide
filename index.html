@@ -8,25 +8,23 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Social API Guide</title>
+	<title>Social Sharing Guide</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
 	<!-- SOCIAL STUFF -->
-  <!-- Facebook -->
-  <meta property="og:title" content="API guide">
+  <!-- Facebook and Google Plus-->
+  <meta property="og:title" content="Social Sharing Guide">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://fayeishere.github.io/apiguide/">
   <meta property="og:image" content="http://fayeishere.github.io/apiguide/images/mouse.jpg">
-  <meta property="og:site_name" content="Social Guide">
-  <meta property="og:description" content="It's trying to be helpful">
+  <meta property="og:site_name" content="Social Sharing Guide">
+  <meta property="og:description" content="OG tag description">
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-<!-- 	<meta name="twitter:site" content="@fayeishere" /> -->
 	<meta name="twitter:title" content="Best Title Ever" />
 	<meta name="twitter:description" content="This is my amazing description." />
-	<meta name="twitter:image" content="http://fayeishere.github.io/apiguide/images/mouse-lg.jpg" />
-	<!-- URL IS NOT WORKING -->
+	<meta name="twitter:image" content="http://fayeishere.github.io/apiguide/images/cattoast.jpg" />
 	<meta name="twitter:url" content="http://fayeishere.github.io/apiguide/" />
 
 	<!-- Mobile Specific Metas
@@ -63,8 +61,8 @@
   <div id="fb-root"></div>
 	<div class="container">
 		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">Social API Guide</h1>
-			<h5>Updated: 9/19/14</h5>
+			<h1 class="remove-bottom" style="margin-top: 40px">Social Sharing Guide</h1>
+			<h5>Updated: 9/22/14</h5>
 			<hr />
 		</div>
 		<div class="sixteen columns box">
@@ -74,6 +72,7 @@
 				<li>FB no longer allows FQL</li>
 				<li>New JS SDK location: js.src = "//connect.facebook.com/en_US/sdk.js";</li>
 				<li>All friend_* permissions have been removed</li>
+				<li>Previous limitation no longer applies. Optimized share photos look large in feed and on profile page</li>
 			</ul>
 			<h4>Twitter: (<a href="https://dev.twitter.com/overview/documentation">https://dev.twitter.com/overview/documentation)</a></h4>
 			<ul>
@@ -88,7 +87,7 @@
 			<h4>(<a href="https://developers.facebook.com/docs/sharing/best-practices">https://developers.facebook.com/docs/sharing/best-practices</a>)</h4>
 			<div class="content-box">
 				<ul class="outer-list">
-					<li>OG tags for ANY and ALL sites:
+					<li>OG tags for ANY and ALL sites (for example simply share this URL):
 						<ul class="inner-list">
 							<li>og:title – The title of your article, excluding any branding.</li>
 							<li>og:site_name - The name of your website. Not the URL, but the name. (i.e. "IMDb" not "imdb.com".)</li>
@@ -103,14 +102,12 @@
 				</ul>
 				<div class="icons">
 					<div class="social fb" id="facebook"><a id="face" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffayeishere.github.io/apiguide/" target="_blank"><img src="images/facebook.png"></a></div>
-<!-- 					<div class="result" ><img src="images/tweet-basic.png"></div> -->
-<!-- 					<div class="social fb" id="twitter-box"><a id="twitter" href="#" target="_blank"><img src="images/facebook.png"></a></div>
-					<div class="result" ><img src="images/tweet-advanced.png"></div> -->
+					<div class="result" ><img src="images/fb-cat.jpg"></div>
 				</div>
 			</div>
 
 			<h4 class="name">Twitter:</h4>
-			<h4>This is for custom twitter button sharing. For direct posting to Twitter refer to http://blog.filemobile.com/twitter-image-preview/ for optimal image sizes in feed.</h4>
+			<h4>This is for custom twitter button sharing without optimized site tags. Note: You can combine a custom button with a Twitter Card for dynamic text while still optimizing a full image. For direct posting to Twitter refer to http://blog.filemobile.com/twitter-image-preview/ for optimal image sizes in feed.</h4>
 			<h4>Examples below. 1st tweeter is the most basic and simple using https://twitter.com/intent/tweet (https://dev.twitter.com/web/intents). 2nd tweeter using https://twitter.com/share (https://dev.twitter.com/web/tweet-button/parameters) in EXPANDED view with two URLs, one is showing a gif (can be replaced by a Twitpic image), site link can be placed in URL parameter for a longer text tweet.</h4>
 			<div class="icons">
 				<div class="social" id="twit-box"><a id="twit" href="https://twitter.com/intent/tweet?text=Testing twitter. Woot. http://www.theworldsworstwebsiteever.com" target="_blank"><img src="images/twitter.png"></a></div>
@@ -134,43 +131,55 @@
 							<li>dnt - Opt-out of tailoring Twitter</li>
 						</ul>
 					</li>
-					<li>Twitter Cards need validation. Default 'Summary Card' OG tags:</li>
+					<li>Twitter Cards need validation. For 'summary_large_image' OG tags (for example simply share this URL):</li>
 						<ul><a href="https://dev.twitter.com/cards/markup">Reference</a>
-							<li>twitter:card - Should be set to a value of “summary”</li>
+							<li>twitter:card - Should be set to a value of “summary_large_image”</li>
 							<li>twitter:title - Title should be concise and will be truncated at 70 characters.</li>
 							<li>twitter:description - A description that concisely summarizes the content of the page, as appropriate for presentation within a Tweet. Do not re-use the title text as the description, or use this field to describe the general services provided by the website. Description text will be truncated at the word to 200 characters.</li>
-							<li>twitter:image - URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. The image must be a minimum size of 120px by 120px and must be less than 1MB in file size. For an expanded tweet and its detail page, the image will be cropped to a 4:3 aspect ratio and resized to be displayed at 120px by 90px. The image will also be cropped and resized to 120px by 120px for use in embedded tweets.</li>
+							<li>twitter:image - URL to a unique image representing the content of the page. Do not use a generic image such as your website logo, author photo, or other image that spans multiple pages. Images for this Card should be at least 280px in width, and at least 150px in height. Image must be less than 1MB in size.</li>
 						</ul>
 				</ul>
+			</div>
+			<h4 class="name">Google Plus:</h4>
+			<h4>This is an example for a custom google plus button post or URL share with OG tag optimization.</h4>
+			<div class="content-box">
+        <a id="g-plus" href="https://plus.google.com/share?url=https%3A%2F%2Ffayeishere.github.io/apiguide/" target="_blank"><img src="images/g-plus.png"></a>
+        <div class="result" ><img src="images/gplus-result.png"></div>
 			</div>
 		</div>
 		<div class="sixteen columns box">
 			<h3>Limitations</h3>
 			<h4 class="name">All: </h4>
 			<ul class="outer-list">
-				<li>Developing within another environment such as youtube makes the OG tags unusable.</li>
+				<li>Developing within another environment such as youtube makes the OG/meta/card tags unusable.</li>
 			</ul>
-			<h4 class="name">Facebook: </h4>
-			<div class="content-box">
-				<ul class="outer-list">
-					<li>Optimized images will display large in "feed" (on left) but on a profile page the image will display as thumbnail (on right).</li>
-					<div id="facebook-wrap">
-						<div id="fb-feed"><img src="images/fb-feed.png"></div><div id="fb-profile"><img src="images/fb-profile.png"></div>
-					</div>
-				</ul>
-			</div>
 			<h4 class="name">Twitter:</h4>
 			<div class="content-box">
 				<ul class="outer-list">
 					<li>140 character limit which includes URL</li>
 					<li>There are quite a few rate limits, check https://dev.twitter.com/rest/public</li>
 					<li>Tweets can be changed by the user before posting.</li>
-					<li>Twitter cards need to be pre-approved by Twitter. Try <a href="https://cards-dev.twitter.com/validator">Preview</a></li>
+					<li>Twitter cards need to be pre-approved by Twitter via an accessible URL. Try <a href="https://cards-dev.twitter.com/validator">Preview</a> Cards may also be cached up to a week.</li>
 					<li>POST statuses / update_with_media requires OAUTH backend solution. Front end solution requires using Twitter Cards</li>
 				</ul>
 			</div>
 		</div>
-
+		<div class="sixteen columns box">
+			<div class="content-box">
+				<h4 class="name">Quick Reference For Developers -</h4>
+				<ul>
+					<li>Twitter - https://twitter.com/intent/tweet?source=SOURCE&amp;text=SHARE_TITLE&amp;url=SHARE_URL</li>
+					<li>Pinterest - http://pinterest.com/pin/create/bookmarklet/?media=[MEDIA]&amp;url=[URL]&amp;is_video=false&amp;description=[TITLE]</li>
+					<li>Facebook - http://www.facebook.com/sharer.php?u=SHARE_URL&amp;t=SHARE_TITLE</li>
+					<li>Google+ - https://plus.google.com/share?url=[URL]</li>
+					<li>Reddit - http://reddit.com/submit?url=SHARE_URL&amp;title=SHARE_TITLE</li>
+					<li>Delicious - http://del.icio.us/post?url=[URL]&amp;title=[TITLE]&amp;notes=[DESCRIPTION]</li>
+					<li>Linkedin - http://www.linkedin.com/shareArticle?mini=true&amp;url=[URL]&amp;title=[TITLE]&amp;source=[SOURCE/DOMAIN]</li>
+					<li>Tumblr - http://www.tumblr.com/share/link?url=[uri encoded URL]&amp;name=[title]&amp;description=[description]</li>
+					<li>Evernote - http://www.evernote.com/clip.action?url=[URL]&amp;title=[TITLE]</li>
+				</ul>
+			</div>
+		</div>
 	</div><!-- container -->
 
 

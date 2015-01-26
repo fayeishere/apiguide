@@ -46,9 +46,21 @@ h4{
 #fb-profile{
 	float: right;
 }
+<<<<<<< HEAD
 #twit-box, #fb-feed, #twitter-box{
 	float: left;
 }
+=======
+#twit-box, #fb-feed, #twitter-box, #facebook, #g-plus{
+	float: left;
+}
+#facebook{
+	margin: 10px 60px 0 0;
+}
+#g-plus{
+	margin-right: 120px;
+}
+>>>>>>> 6df140b7d4f0442dae2780b4d43fc743a8da3ed4
 .box{
 	border: 6px solid #ddd;
 	overflow: hidden;

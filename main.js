@@ -30,7 +30,11 @@ SAS.main = (function() {
       case "localhost:8080":
         appId = "305834246207937";
         break;
+<<<<<<< HEAD
       case "livesite.com":
+=======
+      case "fayeishere.github.io":
+>>>>>>> 6df140b7d4f0442dae2780b4d43fc743a8da3ed4
         appId = "861782343846424";
         break;
       default:
@@ -52,7 +56,11 @@ SAS.main = (function() {
               method: 'feed',
               name: 'Sharing on Facebook and you can too',
               link: 'http://fayeishere.github.io/apiguide/',
+<<<<<<< HEAD
               picture: 'http://'+window.location.host+'/img/coffeecat.jpg',
+=======
+              picture: 'http://fayeishere.github.io/apiguide/images/coffeecat.jpg',
+>>>>>>> 6df140b7d4f0442dae2780b4d43fc743a8da3ed4
               caption: 'Caption is optional',
               description: 'This is a fantastic description.'
             },
@@ -72,7 +80,11 @@ SAS.main = (function() {
        var js, fjs = d.getElementsByTagName(s)[0];
        if (d.getElementById(id)) {return;}
        js = d.createElement(s); js.id = id;
+<<<<<<< HEAD
        js.src = "//connect.facebook.net/en_US/all.js";
+=======
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+>>>>>>> 6df140b7d4f0442dae2780b4d43fc743a8da3ed4
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
 
