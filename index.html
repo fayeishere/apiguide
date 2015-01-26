@@ -13,7 +13,13 @@
 	<meta name="author" content="">
 
 	<!-- SOCIAL STUFF -->
-
+  <!-- Facebook -->
+  <meta property="og:title" content="API guide">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://fayeishere.github.io/apiguide/">
+  <meta property="og:image" content="http://fayeishere.github.io/apiguide/images/mouse.jpg">
+  <meta property="og:site_name" content="Social Guide">
+  <meta property="og:description" content="It's trying to be helpful">
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 <!-- 	<meta name="twitter:site" content="@fayeishere" /> -->
@@ -54,7 +60,7 @@
 
 	<!-- Primary Page Layout
 	================================================== -->
-
+  <div id="fb-root"></div>
 	<div class="container">
 		<div class="sixteen columns">
 			<h1 class="remove-bottom" style="margin-top: 40px">Social API Guide</h1>
@@ -92,17 +98,24 @@
 							<li>fb:app_id – The unique ID that lets Facebook know the identity of your site. This is crucial for Facebook Insights to work properly. Please see our Insights documentation to learn more.</li>
 						</ul>
 					</li>
-					<li>For direct "button" sharing, minimum copy requirements are: name of app, link to be shared, an image, and description.</li>
 					<li>Images should be 1200 x 630 pixels for the best display on high resolution devices.</li>
+					<li>For direct "button" sharing, minimum copy requirements are: name of app, link to be shared, an image, and description.</li>
 				</ul>
+				<div class="icons">
+					<div class="social fb" id="facebook"><a id="face" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffayeishere.github.io/apiguide/" target="_blank"><img src="images/facebook.png"></a></div>
+<!-- 					<div class="result" ><img src="images/tweet-basic.png"></div> -->
+<!-- 					<div class="social fb" id="twitter-box"><a id="twitter" href="#" target="_blank"><img src="images/facebook.png"></a></div>
+					<div class="result" ><img src="images/tweet-advanced.png"></div> -->
+				</div>
 			</div>
+
 			<h4 class="name">Twitter:</h4>
 			<h4>This is for custom twitter button sharing. For direct posting to Twitter refer to http://blog.filemobile.com/twitter-image-preview/ for optimal image sizes in feed.</h4>
 			<h4>Examples below. 1st tweeter is the most basic and simple using https://twitter.com/intent/tweet (https://dev.twitter.com/web/intents). 2nd tweeter using https://twitter.com/share (https://dev.twitter.com/web/tweet-button/parameters) in EXPANDED view with two URLs, one is showing a gif (can be replaced by a Twitpic image), site link can be placed in URL parameter for a longer text tweet.</h4>
 			<div class="icons">
-				<div class="twitter" id="twit-box"><a id="twit" href="https://twitter.com/intent/tweet?text=Testing twitter. Woot. http://www.theworldsworstwebsiteever.com" target="_blank"><img src="images/twitter.png"></a></div>
+				<div class="social" id="twit-box"><a id="twit" href="https://twitter.com/intent/tweet?text=Testing twitter. Woot. http://www.theworldsworstwebsiteever.com" target="_blank"><img src="images/twitter.png"></a></div>
 				<div class="result" ><img src="images/tweet-basic.png"></div>
-				<div class="twitter" id="twitter-box"><a id="twitter" href="#" target="_blank"><img src="images/twitter.png"></a></div>
+				<div class="social" id="twitter-box"><a id="twitter" href="#" target="_blank"><img src="images/twitter.png"></a></div>
 				<div class="result" ><img src="images/tweet-advanced.png"></div>
 			</div>
 			<div class="content-box">
@@ -141,7 +154,7 @@
 			<div class="content-box">
 				<ul class="outer-list">
 					<li>Optimized images will display large in "feed" (on left) but on a profile page the image will display as thumbnail (on right).</li>
-					<div id="facebook-box">
+					<div id="facebook-wrap">
 						<div id="fb-feed"><img src="images/fb-feed.png"></div><div id="fb-profile"><img src="images/fb-profile.png"></div>
 					</div>
 				</ul>

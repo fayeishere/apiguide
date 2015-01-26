@@ -33,12 +33,15 @@ h4{
 .bolder{
 	font-weight: bold;
 }
-.twitter{
+.social{
 	height: 150px;
 	width: 150px;
 	background-color: red;
 	border-radius: 50%;
-		margin-left: 60px;
+	margin-left: 60px;
+}
+.fb{
+	background-color: #3b5998;
 }
 #fb-profile{
 	float: right;
@@ -72,7 +75,7 @@ h4{
 /*	margin: 0 auto;*/
 /*	padding-bottom: 160px;*/
 }
-.twitter img{
+.social img{
 	margin: 50px;
 }
 li{
@@ -81,12 +84,12 @@ li{
 .section{
 	margin-top: 30px;
 }
-#facebook-box{
+#facebook-wrap{
 	width: 850px;
 	margin: 0 auto;
 	padding-bottom: 425px;
 }
-#facebook-box img{
+#facebook-wrap img{
 	width: 400px;
 }
 .result{
